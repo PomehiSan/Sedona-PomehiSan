@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "ptsans";
+  font-style: normal;
+  font-weight: 400;
+
+  src: local("ptsans"), url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ptsans";
+  font-style: normal;
+  font-weight: 700;
+
+  src: local("ptsans"), url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+}
+
+.page-body {
+  font-family: "ptsans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  background-color: @basic-white;
+  min-width: 320px;
+  .margin();
+  .padding();
+}
+
+.link {
+  text-decoration: none;
+  color: @basic-white;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

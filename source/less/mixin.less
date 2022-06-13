@@ -1,0 +1,26 @@
+.margin(@top: 0, @right: 0, @bottom: 0, @left: 0) {
+  margin-top: @top;
+  margin-right: @right;
+  margin-bottom: @bottom;
+  margin-left: @left;
+}
+
+.padding(@top: 0, @right: 0, @bottom: 0, @left: 0) {
+  padding-top: @top;
+  padding-right: @right;
+  padding-bottom: @bottom;
+  padding-left: @left;
+}
+
+.absolute-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list-clear() {
+  .margin();
+  .padding();
+  list-style: none;
+}

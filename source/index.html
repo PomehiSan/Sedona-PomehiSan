@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Город Sedona</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header wrapper">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
-      </a>
+      <div class="page-header__menu">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
+        </a>
+        <button class="main-nav__open-button" type="button" aria-label="Открыть меню">Открыть меню</button>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav__site-list">
           <li class="main-nav__item">
@@ -33,7 +37,6 @@
           </li>
         </ul>
       </nav>
-      <button class="main-nav__open-button" type="button" aria-label="Открыть меню">Открыть меню</button>
       <button class="main-nav__close-button" type="button" aria-label="Закрыть меню">Закрыть меню</button>
     </header>
 
@@ -58,7 +61,9 @@
                 <p class="fact__number">№1</p>
                 <p class="fact__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
-              <img class="fact__image" src="img/facts/true-city.jpg" width="320" height="260" alt="фото города">
+              <div class="fact__image-box" width="100vw" height="260px">
+                <img class="fact__image" src="img/facts/true-city.jpg" alt="фото города">
+              </div>
               <div class="fact__additionally additionally">
                 <ul class="additionally__list">
                   <li class="additionally__item additionally__item--housing">
@@ -82,7 +87,9 @@
                 <p class="fact__number">№2</p>
                 <p class="fact__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <img class="fact__image" src="img/facts/diablo-bridge.jpg" width="320" height="260" alt="горы рядом с городом">
+              <div class="fact__image-box" width="100vw" height="260px">
+                <img class="fact__image" src="img/facts/diablo-bridge.jpg" alt="горы рядом с городом">
+              </div>
             </li>
             <li class="fact__item">
               <div class="fact__header">
