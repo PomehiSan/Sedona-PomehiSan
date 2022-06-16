@@ -12,33 +12,33 @@
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
         </a>
-        <button class="main-nav__open-button" type="button" aria-label="Открыть меню">Открыть меню</button>
+        <button class="page-header__open-menu-button" type="button" aria-label="Открыть меню">Открыть меню</button>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__site-list">
-          <li class="main-nav__item">
-            <a class="main-nav__link link main-nav__link--current ">
+          <li class="button main-nav__item">
+            <a class="link main-nav__link main-nav__link--current">
               Главная
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link link" href="gallery.html">
+          <li class="button main-nav__item">
+            <a class="link main-nav__link" href="gallery.html">
               Фото и видео
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link link" href="review.html" >
+          <li class="button main-nav__item">
+            <a class="link main-nav__link" href="review.html" >
               Форма отзыва
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link link" href="https://htmlacademy.ru/">
+          <li class="button main-nav__item">
+            <a class="link main-nav__link" href="https://htmlacademy.ru/">
               HTML Academy
             </a>
           </li>
         </ul>
+        <button class="main-nav__close-button" type="button" aria-label="Закрыть меню">Закрыть меню</button>
       </nav>
-      <button class="main-nav__close-button" type="button" aria-label="Закрыть меню">Закрыть меню</button>
     </header>
 
     <main class="main wrapper">
@@ -54,13 +54,15 @@
           <p class="headline__title">Седона — небольшой городок в Аризоне, заслуживающий большего</p>
           <p class="headline__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
-        <div class="intro__facts facts">
+        <div class="fact">
           <ol class="fact__list">
             <li class="fact__item">
-              <div class="fact__header fact__header--main-fact">
-                <h3 class="fact__title">Настоящий городок</h3>
-                <p class="fact__number">№1</p>
-                <p class="fact__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+              <div class="fact__header fact__header--main-fact fact__header--triangle">
+                <div class="fact__header-box">
+                  <h3 class="fact__title">Настоящий городок</h3>
+                  <p class="fact__number">№1</p>
+                  <p class="fact__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                </div>
               </div>
               <div class="fact__image-box" width="100vw" height="260px">
                 <img class="fact__image" src="img/facts/true-city.jpg" alt="фото города">
@@ -71,22 +73,24 @@
                     <p class="additionally__head">Жилье</p>
                     <p class="additionally__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                   </li>
-                  <li class="additionally__item additionally__item--food">
-                    <p class="additionally__head">Еда</p>
-                    <p class="additionally__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                  </li>
                   <li class="additionally__item additionally__item--souvenirs">
                     <p class="additionally__head">Сувениры</p>
                     <p class="additionally__description">Не только китайского, но и местного производства!</p>
+                  </li>
+                  <li class="additionally__item additionally__item--food">
+                    <p class="additionally__head">Еда</p>
+                    <p class="additionally__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="fact__item">
               <div class="fact__header fact__header--main-fact">
-                <h3 class="fact__title">Там есть мост дъявола</h3>
-                <p class="fact__number">№2</p>
-                <p class="fact__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                <div class="fact__header-box">
+                  <h3 class="fact__title">Там есть мост дъявола</h3>
+                  <p class="fact__number">№2</p>
+                  <p class="fact__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                </div>
               </div>
               <div class="fact__image-box" width="100vw" height="260px">
                 <img class="fact__image" src="img/facts/diablo-bridge.jpg" alt="горы рядом с городом">
@@ -94,23 +98,29 @@
             </li>
             <li class="fact__item">
               <div class="fact__header">
-                <h3 class="fact__title">Небольшая площадь</h3>
-                <p class="fact__number">№3</p>
-                <p class="fact__description">Все интересные места находятся очень близко</p>
+                <div class="fact__header-box">
+                  <h3 class="fact__title">Небольшая площадь</h3>
+                  <p class="fact__number">№3</p>
+                  <p class="fact__description">Все интересные места находятся очень близко</p>
+                </div>
               </div>
             </li>
             <li class="fact__item">
               <div class="fact__header">
-                <h3 class="fact__title">Красивая дорога</h3>
-                <p class="fact__number">№4</p>
-                <p class="fact__description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+                <div class="fact__header-box">
+                  <h3 class="fact__title">Красивая дорога</h3>
+                  <p class="fact__number">№4</p>
+                  <p class="fact__description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+                </div>
               </div>
             </li>
             <li class="fact__item">
               <div class="fact__header">
-                <h3 class="fact__title">Мало туристов</h3>
-                <p class="fact__number">№5</p>
-                <p class="fact__description">Большинство едет в гранд каньон и толпится там</p>
+                <div class="fact__header-box">
+                  <h3 class="fact__title">Мало туристов</h3>
+                  <p class="fact__number">№5</p>
+                  <p class="fact__description">Большинство едет в гранд каньон и толпится там</p>
+                </div>
               </div>
             </li>
           </ol>
@@ -123,7 +133,7 @@
           <p class="headline__title">Заинтересовались?</p>
           <p class="headline__description">Укажите предпологаемые даты поездки и мы покажем вас лучшие предложения гостиниц в седоне</p>
         </div>
-        <a class="search__button button" href="">Найти гостиницу</a>
+        <a class="link button search__button" href="">Найти гостиницу</a>
       </section>
 
       <section class="map">
@@ -134,7 +144,7 @@
 
     <footer class="page-footer">
 
-      <p class="hashtag">#VisitSedona</p>
+      <p class="page-footer__hashtag hashtag">#VisitSedona</p>
 
       <div class="page-footer__social social">
         <ul class="social__list">

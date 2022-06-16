@@ -7,6 +7,20 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-bottom: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 57px;
+    width: 100%;
+    min-width: 320px;
+    height: 57px;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .greetings__image {

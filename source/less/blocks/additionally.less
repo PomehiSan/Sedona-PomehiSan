@@ -1,13 +1,26 @@
+.additionally {
+  display: flex;
+}
+
 .additionally__list {
   .list-clear();
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .additionally__item {
   text-align: left;
+  padding-left: 58px;
+  .margin(@bottom: 26px);
 }
 
 .additionally__head {
+  .margin(@bottom: 16px);
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+}
+
+.additionally__description {
+  .margin();
 }

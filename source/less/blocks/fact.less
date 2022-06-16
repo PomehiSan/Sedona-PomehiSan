@@ -1,0 +1,88 @@
+.fact {
+  .padding(@bottom: 33px);
+}
+
+.fact__list {
+  .list-clear();
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.fact__header-box {
+  margin: auto auto;
+}
+
+.fact__header {
+  display: flex;
+  padding: 0 35px;
+  background-color: @basic-lightgrey;
+  min-height: 168px;
+
+  &--main-fact {
+    padding: 0 10px;
+    background-color: @basic-lightblue;
+    color: @basic-white;
+    min-height: 190px;
+  }
+
+  &--triangle {
+    position: relative;
+    padding-top: 37px;
+    min-height: 174px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 37px;
+      background-image: url("../img/fact-triangle.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 37px;
+    }
+  }
+}
+
+.fact__title {
+  .margin(@bottom: 11px);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.fact__number {
+  .margin(@bottom: 17px);
+
+  &::before {
+    content: "— ";
+  }
+
+  &::after {
+    content: " —";
+  }
+}
+
+.fact__description {
+  .margin();
+}
+
+.fact__image-box {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.fact__image {
+  .absolute-center();
+  left: 22%;
+  height: 260px;
+
+  @media screen and (min-width: 460px) {
+    left: 50%;
+  }
+}
+
+.fact__additionally {
+  padding-top: 35px;
+}

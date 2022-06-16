@@ -1,16 +1,21 @@
 .headline {
-  line-height: 26px;
+  line-height: 27px;
   text-transform: uppercase;
   padding: 0 25px;
   max-width: 540px;
+  margin: 0 auto;
 }
 
 .headline__title {
+  .margin(@bottom: 27px);
   font-size: 18px;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .headline__description {
+  .margin();
+  line-height: 26px;
   font-size: 14px;
   font-weight: 400;
 }
