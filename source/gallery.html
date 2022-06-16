@@ -3,49 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>Галлерея Sedona</title>
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header wrapper">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
-      </a>
+      <div class="page-header__menu">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
+        </a>
+        <button class="page-header__open-menu-button" type="button" aria-label="Открыть меню">Открыть меню</button>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav__site-list">
-          <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link link">
+          <li class="button main-nav__item">
+            <a class="link main-nav__link" href="index.html">
               Главная
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link link main-nav__link--current">
+          <li class="button main-nav__item">
+            <a class="link main-nav__link main-nav__link--current">
               Фото и видео
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link link" href="review.html">
+          <li class="button main-nav__item">
+            <a class="link main-nav__link" href="review.html">
               Форма отзыва
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link link" href="https://htmlacademy.ru/">
+          <li class="button main-nav__item">
+            <a class="link main-nav__link" href="https://htmlacademy.ru/">
               HTML Academy
             </a>
           </li>
         </ul>
+        <button class="main-nav__close-button" type="button" aria-label="Закрыть меню">Закрыть меню</button>
       </nav>
-      <button class="main-nav__open-button" type="button" aria-label="Открыть меню">Открыть меню</button>
-      <button class="main-nav__close-button" type="button" aria-label="Закрыть меню">Закрыть меню</button>
     </header>
 
     <main class="gallery wrapper">
       <h1 class="visually-hidden">Галлерея города Sedona</h1>
 
-      <div class="greetings">
-        <img class="greetings__image" src="img/sedona.svg" alt="Sedona">
+      <div class="greetings greetings--secondary-page">
+        <img class="greetings__image greetings__image--secondary-page" src="img/sedona.svg" width="229px" height="39px" alt="Sedona">
       </div>
 
       <section class="gallery-photo">
-        <h2 class="vissualy-hidden">Фото местности Sedona</h2>
+        <h2 class="visually-hidden">Фото местности Sedona</h2>
         <div class="gallery__headline headline">
           <p class="headline__title">Фото и видео</p>
           <p class="headline__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
@@ -79,7 +83,7 @@
       </section>
 
       <section class="gallery-video">
-        <h2 class="vissualy-hidden">Видео местности Sedona</h2>
+        <h2 class="visually-hidden">Видео местности Sedona</h2>
         <div class="gallery__headline headline">
           <p class="headline__title">Все еще сомневаетесь?</p>
           <p class="headline__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>

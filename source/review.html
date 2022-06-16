@@ -3,53 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <title>Оставить отзыв</title>
+  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="page__body">
+<body class="page-body">
   <header class="page-header wrapper">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
-    </a>
+    <div class="page-header__menu">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
+      </a>
+      <button class="page-header__open-menu-button" type="button" aria-label="Открыть меню">Открыть меню</button>
+    </div>
     <nav class="main-nav">
       <ul class="main-nav__site-list">
-        <li class="main-nav__item">
-          <a href="index.html" class="main-nav__link link">
+        <li class="button main-nav__item">
+          <a class="link main-nav__link" href="index.html">
             Главная
           </a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link link" href="gallery.html">
+        <li class="button main-nav__item">
+          <a class="link main-nav__link" href="gallery.html">
             Фото и видео
           </a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link link main-nav__link--current">
+        <li class="button main-nav__item">
+          <a class="link main-nav__link main-nav__link--current">
             Форма отзыва
           </a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link link" href="https://htmlacademy.ru/">
+        <li class="button main-nav__item">
+          <a class="link main-nav__link" href="https://htmlacademy.ru/">
             HTML Academy
           </a>
         </li>
       </ul>
+      <button class="main-nav__close-button" type="button" aria-label="Закрыть меню">Закрыть меню</button>
     </nav>
-    <button class="main-nav__open-button" type="button" aria-label="Открыть меню">Открыть меню</button>
-    <button class="main-nav__close-button" type="button" aria-label="Закрыть меню">Закрыть меню</button>
   </header>
 
   <main class="review wrapper">
     <h1 class="visually-hidden">Оставить отзыв о Sedona</h1>
 
-    <div class="greetings">
-      <img class="greetings__image" src="img/sedona.svg" alt="Sedona">
+    <div class="greetings greetings--secondary-page">
+      <img class="greetings__image greetings__image--secondary-page" src="img/sedona.svg" width="229px" height="39px" alt="Sedona">
     </div>
 
-    <div class="review__headline headline">
+    <div class="headline review__headline review__headline--form-page">
       <p class="headline__title">Оставьте свой отзыв</p>
       <p class="headline__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </div>
 
-    <form class="review-form" action="https://echo.htmlacademy.ru" >
+    <form class="review-form" action="https://echo.htmlacademy.ru">
       <fieldset class="review-form__item text-input text-input--full-name">
         <legend class="review-form__legend">Представьтесь:</legend>
         <ul class="text-input__list">
@@ -118,9 +122,9 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="review-form__item text-input">
+      <fieldset class="review-form__item review-form__item--textarea text-input">
         <legend class="review-form__legend">Опишите свои эмоции:</legend>
-        <textarea class="text-input__textarea" name="impressions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+        <textarea class="text-input__input text-input__input--textarea" name="impressions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
       <button class="review-form__button button" type="submit">Отправить отзыв</button>
     </form>
@@ -128,7 +132,7 @@
 
   <footer class="page-footer">
 
-    <p class="hashtag">#VisitSedona</p>
+    <p class="page-footer__hashtag hashtag">#VisitSedona</p>
 
     <div class="page-footer__social social">
       <ul class="social__list">

@@ -45,6 +45,8 @@
 }
 .button {
   display: flex;
+  border: none;
+  color: white;
   width: 280px;
   min-height: 58px;
   background-color: #81B3D2;
@@ -124,6 +126,7 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 32px;
+  overflow: hidden;
 }
 .greetings::after {
   content: "";
@@ -137,6 +140,17 @@
   bottom: 0;
   left: 0;
 }
+.greetings--secondary-page {
+  background-image: url("../img/background-form-mobile.jpg");
+  height: 158px;
+  background-size: auto;
+  background-position: -292px -47px;
+}
+@media screen and (min-width: 500px) {
+  .greetings--secondary-page {
+    background-position: -100px -47px;
+  }
+}
 .greetings__image {
   width: 282px;
   height: 214px;
@@ -146,10 +160,13 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.greetings__image--secondary-page {
+  width: 229px;
+  height: 39px;
+}
 .headline {
-  line-height: 27px;
+  line-height: 26px;
   text-transform: uppercase;
-  padding: 0 25px;
   max-width: 540px;
   margin: 0 auto;
 }
@@ -170,6 +187,13 @@
   line-height: 26px;
   font-size: 14px;
   font-weight: 400;
+}
+.review__headline {
+  padding: 0 25px;
+}
+.review__headline--form-page {
+  padding: 0 20px;
+  margin-bottom: 16px;
 }
 .fact {
   padding-top: 0;
@@ -321,7 +345,7 @@
   line-height: 26px;
 }
 .map {
-  margin-bottom: 39px;
+  margin-bottom: 10px;
   height: 350px;
 }
 .map__static {
@@ -350,13 +374,87 @@
   margin: 0 auto;
 }
 .page-footer__hashtag {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 34px;
-  margin-left: 0;
+  padding-top: 28px;
+  padding-right: 0;
+  padding-bottom: 34px;
+  padding-left: 0;
 }
 .page-footer__social {
   margin-bottom: 40px;
+}
+.review-form {
+  margin-bottom: 48px;
+}
+.review-form__item {
+  border: none;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 26px;
+  margin-left: 0;
+  line-height: 26px;
+}
+.review-form__legend {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+  padding: 0 10px;
+  padding-top: 20px;
+}
+.review-form__item--textarea .review-form__legend {
+  margin-bottom: 15px;
+}
+.review-form__button {
+  margin: 0 auto;
+}
+.text-input--full-name .text-input__item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.text-input--contact .text-input__item:not(:last-of-type) {
+  margin-bottom: 14px;
+}
+.text-input--contact .text-input__label {
+  display: block;
+  margin-bottom: 8px;
+}
+.text-input__label {
+  text-transform: uppercase;
+}
+.text-input__list {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.text-input__input {
+  font-weight: 700;
+}
+.selection__list {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.selection__item {
+  min-height: 56px;
+}
+.selection__label {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
