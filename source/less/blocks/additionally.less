@@ -6,12 +6,30 @@
   .list-clear();
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding: 0;
+  }
 }
 
 .additionally__item {
   text-align: left;
   padding-left: 58px;
   .margin(@bottom: 26px);
+
+  &--souvenirs {
+    @media (min-width: @tablet-width) {
+      order: 3;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 33.333%;
+    min-height: 113px;
+    padding: 0 35px;
+    text-align: center;
+  }
 }
 
 .additionally__head {

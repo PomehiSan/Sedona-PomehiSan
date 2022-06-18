@@ -2,29 +2,56 @@
   .list-clear();
   line-height: 21px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.fact__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33.333%;
+  }
+
+  &--main-fact {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
+  }
 }
 
 .fact__header-box {
   margin: auto auto;
+  padding: 0 35px;
 }
 
 .fact__header {
   display: flex;
-  padding: 0 35px;
   background-color: @basic-lightgrey;
   min-height: 168px;
+  width: 100%;
 
   &--main-fact {
-    padding: 0 10px;
     background-color: @basic-lightblue;
     color: @basic-white;
     min-height: 190px;
+
+    @media (min-width: @tablet-width) {
+      width: 33.333%;
+    }
   }
 
   &--triangle {
     position: relative;
     padding-top: 37px;
     min-height: 174px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+    }
 
     &::before {
       content: "";
@@ -36,7 +63,16 @@
       background-image: url("../img/fact-triangle.svg");
       background-repeat: no-repeat;
       background-size: 100% 37px;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 256px;
+    padding: 0;
   }
 }
 
@@ -45,6 +81,11 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    width: min-content;
+  }
 }
 
 .fact__number {
@@ -67,6 +108,10 @@
   position: relative;
   height: 260px;
   overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    width: 66.666%;
+  }
 }
 
 .fact__image {
@@ -81,4 +126,10 @@
 
 .fact__additionally {
   padding-top: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding-top: 158px;
+    padding-bottom: 26px;
+  }
 }

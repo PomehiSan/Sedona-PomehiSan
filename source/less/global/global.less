@@ -1,3 +1,10 @@
+@tablet-width: 768px;
+@deskop-width: 1200px;
+
+.page {
+  background-color: @backgroubd-input-gray;
+}
+
 .page-body {
   font-family: "ptsans", sans-serif;
   font-size: 14px;
@@ -5,8 +12,12 @@
   text-align: center;
   background-color: @basic-white;
   min-width: 320px;
-  .margin();
-  .padding();
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (min-width: @deskop-width) {
+    box-shadow: -5px 0 6px -1px rgba(0, 0, 0, 0.2), 5px 0 6px -1px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .link {

@@ -1,7 +1,22 @@
+.page-footer {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 .page-footer__hashtag {
   .padding(@bottom: 34px, @top: 28px);
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__social {
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }

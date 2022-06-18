@@ -1,15 +1,25 @@
 .main-nav {
-  position: relative;
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .main-nav__site-list {
   .list-clear();
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  color: @basic-white;
   background-color: @basic-lightblue;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .main-nav__item {
@@ -18,21 +28,35 @@
   font-size: 18px;
   line-height: 40px;
   margin-bottom: 1px;
-
   box-shadow: 0 1px 0 @shadow-black-menu-button, inset 0 1px 0 @shadow-white-menu-button;
 
   &:last-of-type {
-    margin-bottom: 0;
     box-shadow: inset 0 1px 0 @shadow-white-menu-button;
   }
 
-  &:first-of-type {
-    box-shadow: 0 1px 0 @shadow-black-menu-button;
+  &--logo {
+    margin-bottom: 0;
+    box-shadow: none;
+    background-color: @basic-white;
+    order: 2;
+
+    @media (min-width: @tablet-width) {
+      order: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 20%;
+    margin: 0;
+    box-shadow: none;
+    background-color: transparent;
   }
 }
 
-.main-nav__close-button {
-  position: absolute;
-  right: 0;
-  top: 0;
+.main-nav__link {
+  @media (min-width: @tablet-width) {
+    color: @basic-black;
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
