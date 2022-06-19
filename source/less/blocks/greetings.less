@@ -26,19 +26,16 @@
     left: 0;
   }
 
-  &--main-page {
-    margin-bottom: 32px;
-  }
-
   &--secondary-page {
-    margin-bottom: 32px;
-    background-image: url("../img/background-form-mobile.jpg");
+    background-image: url("../img/background-secondary-mobile.jpg");
     height: 158px;
     background-size: auto;
-    background-position: -292px -47px;
+    background-position: -292px -56px;
 
-    @media (min-width: 500px) {
-      background-position: -100px -47px;
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/background-secondary.jpg");
+      height: 290px;
+      background-position: 50% 100%;
     }
   }
 }
@@ -46,18 +43,23 @@
 .greetings__image {
   width: 282px;
   height: 214px;
-  margin: 0 auto;
-  margin-top: 90px;
-
-  &--secondary-page {
-    margin-top: 52px;
-    width: 229px;
-    height: 39px;
-  }
+  .absolute-center();
 
   @media (min-width: @tablet-width) {
-    margin-top: 77px;
     width: 460px;
     height: 350px;
+    top: 48.7%;
+  }
+
+  &--secondary-page {
+    width: 229px;
+    height: 39px;
+    top: 45%;
+
+    @media (min-width: @tablet-width) {
+      width: 460px;
+      height: 78px;
+      top: 47%;
+    }
   }
 }

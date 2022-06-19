@@ -21,30 +21,8 @@
       width: 100%;
     }
   }
-}
 
-.fact__header-box {
-  margin: auto auto;
-  padding: 0 35px;
-}
-
-.fact__header {
-  display: flex;
-  background-color: @basic-lightgrey;
-  min-height: 168px;
-  width: 100%;
-
-  &--main-fact {
-    background-color: @basic-lightblue;
-    color: @basic-white;
-    min-height: 190px;
-
-    @media (min-width: @tablet-width) {
-      width: 33.333%;
-    }
-  }
-
-  &--triangle {
+  &:first-of-type {
     position: relative;
     padding-top: 37px;
     min-height: 174px;
@@ -60,6 +38,7 @@
       left: 0;
       width: 100%;
       height: 37px;
+      background-color: @basic-lightblue;
       background-image: url("../img/fact-triangle.svg");
       background-repeat: no-repeat;
       background-size: 100% 37px;
@@ -69,27 +48,56 @@
       }
     }
   }
+}
+
+.fact__header {
+  padding: 0 35px;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-rows: 1fr auto 1fr;
+  background-color: @basic-lightgrey;
+  min-height: 168px;
+  width: 100%;
+
+  &--main-fact {
+    background-color: @basic-lightblue;
+    color: @basic-white;
+    min-height: 190px;
+
+    @media (min-width: @tablet-width) {
+      width: 33.333%;
+    }
+  }
+
+  &--main-fact-2 {
+    order: 2;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 256px;
-    padding: 0;
   }
 }
 
+.fact__title-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .fact__title {
-  .margin(@bottom: 11px);
+  .margin();
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
+    font-size: 21px;
     display: inline-block;
-    width: min-content;
   }
 }
 
 .fact__number {
-  .margin(@bottom: 17px);
+  .margin(@top: 11px, @bottom: 17px);
 
   &::before {
     content: "— ";
@@ -104,23 +112,23 @@
   .margin();
 }
 
-.fact__image-box {
-  position: relative;
-  height: 260px;
-  overflow: hidden;
+.fact__image {
+  height: 256px;
+  width: 100%;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
     width: 66.666%;
   }
 }
 
-.fact__image {
-  .absolute-center();
-  left: 22%;
-  height: 260px;
+@media (min-width: @desktop-width) {
+  .fact__image-1 {
+    content: url("../img/facts/true-city.jpg");
+  }
 
-  @media screen and (min-width: 460px) {
-    left: 50%;
+  .fact__image-2 {
+    content: url("../img/facts/diablo-bridge.jpg");
   }
 }
 

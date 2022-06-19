@@ -188,37 +188,44 @@
   bottom: 0;
   left: 0;
 }
-.greetings--main-page {
-  margin-bottom: 32px;
-}
 .greetings--secondary-page {
-  margin-bottom: 32px;
-  background-image: url("../img/background-form-mobile.jpg");
+  background-image: url("../img/background-secondary-mobile.jpg");
   height: 158px;
   background-size: auto;
-  background-position: -292px -47px;
+  background-position: -292px -56px;
 }
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .greetings--secondary-page {
-    background-position: -100px -47px;
+    background-image: url("../img/background-secondary.jpg");
+    height: 290px;
+    background-position: 50% 100%;
   }
 }
 .greetings__image {
   width: 282px;
   height: 214px;
-  margin: 0 auto;
-  margin-top: 90px;
-}
-.greetings__image--secondary-page {
-  margin-top: 52px;
-  width: 229px;
-  height: 39px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 @media (min-width: 768px) {
   .greetings__image {
-    margin-top: 77px;
     width: 460px;
     height: 350px;
+    top: 48.7%;
+  }
+}
+.greetings__image--secondary-page {
+  width: 229px;
+  height: 39px;
+  top: 45%;
+}
+@media (min-width: 768px) {
+  .greetings__image--secondary-page {
+    width: 460px;
+    height: 78px;
+    top: 47%;
   }
 }
 .headline {
@@ -254,10 +261,28 @@
   padding: 0 20px;
   margin-bottom: 16px;
 }
+@media (min-width: 768px) {
+  .review__headline .headline__title {
+    font-size: 30px;
+  }
+}
 .review__review-form {
   max-width: 375px;
   padding: 0 20px;
   margin-bottom: 48px;
+}
+.review__greetings {
+  margin-bottom: 36px;
+}
+@media (min-width: 768px) {
+  .review__greetings {
+    margin-bottom: 65px;
+  }
+}
+@media (min-width: 1200px) {
+  .review__greetings {
+    margin-bottom: 114px;
+  }
 }
 .fact__list {
   margin-top: 0;
@@ -290,12 +315,38 @@
     width: 100%;
   }
 }
-.fact__header-box {
-  margin: auto auto;
-  padding: 0 35px;
+.fact__item:first-of-type {
+  position: relative;
+  padding-top: 37px;
+  min-height: 174px;
+}
+@media (min-width: 768px) {
+  .fact__item:first-of-type {
+    padding-top: 0;
+  }
+}
+.fact__item:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 37px;
+  background-color: #81B3D2;
+  background-image: url("../img/fact-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 37px;
+}
+@media (min-width: 768px) {
+  .fact__item:first-of-type::before {
+    display: none;
+  }
 }
 .fact__header {
-  display: flex;
+  padding: 0 35px;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-rows: 1fr auto 1fr;
   background-color: #EEEEEE;
   min-height: 168px;
   width: 100%;
@@ -310,42 +361,23 @@
     width: 33.333%;
   }
 }
-.fact__header--triangle {
-  position: relative;
-  padding-top: 37px;
-  min-height: 174px;
-}
-@media (min-width: 768px) {
-  .fact__header--triangle {
-    padding-top: 0;
-  }
-}
-.fact__header--triangle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 37px;
-  background-image: url("../img/fact-triangle.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 37px;
-}
-@media (min-width: 768px) {
-  .fact__header--triangle::before {
-    display: none;
-  }
+.fact__header--main-fact-2 {
+  order: 2;
 }
 @media (min-width: 768px) {
   .fact__header {
     min-height: 256px;
-    padding: 0;
   }
+}
+.fact__title-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .fact__title {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 11px;
+  margin-bottom: 0;
   margin-left: 0;
   font-size: 18px;
   line-height: 26px;
@@ -353,14 +385,12 @@
 }
 @media (min-width: 768px) {
   .fact__title {
+    font-size: 21px;
     display: inline-block;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
   }
 }
 .fact__number {
-  margin-top: 0;
+  margin-top: 11px;
   margin-right: 0;
   margin-bottom: 17px;
   margin-left: 0;
@@ -377,27 +407,23 @@
   margin-bottom: 0;
   margin-left: 0;
 }
-.fact__image-box {
-  position: relative;
-  height: 260px;
-  overflow: hidden;
+.fact__image {
+  height: 256px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
-  .fact__image-box {
+  .fact__image {
     width: 66.666%;
   }
 }
-.fact__image {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 22%;
-  height: 260px;
-}
-@media screen and (min-width: 460px) {
-  .fact__image {
-    left: 50%;
+@media (min-width: 1200px) {
+  .fact__image-1 {
+    content: url("../img/facts/true-city.jpg");
+  }
+  .fact__image-2 {
+    content: url("../img/facts/diablo-bridge.jpg");
   }
 }
 .fact__additionally {
@@ -462,6 +488,11 @@
   font-size: 18px;
   line-height: 26px;
 }
+@media (min-width: 768px) {
+  .additionally__head {
+    font-size: 21px;
+  }
+}
 .additionally__description {
   margin-top: 0;
   margin-right: 0;
@@ -503,6 +534,11 @@
 .search__headline {
   padding: 0 25px;
   margin-bottom: 27px;
+}
+@media (min-width: 768px) {
+  .search__headline .headline__title {
+    font-size: 30px;
+  }
 }
 .search__button {
   margin: 0 auto;
@@ -714,6 +750,9 @@
   .intro__headline {
     margin-bottom: 52px;
   }
+  .intro__headline .headline__title {
+    font-size: 21px;
+  }
 }
 .intro__fact {
   padding-top: 0;
@@ -726,6 +765,19 @@
 }
 .main__search {
   padding-bottom: 49px;
+}
+.main__greetings {
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .main__greetings {
+    margin-bottom: 43px;
+  }
+}
+@media (min-width: 1200px) {
+  .main__greetings {
+    margin-bottom: 55px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
