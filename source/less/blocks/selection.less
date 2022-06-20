@@ -10,3 +10,38 @@
   font-size: 18px;
   font-weight: 700;
 }
+
+@media (min-width: @tablet-width) {
+  .selection--visited .selection__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .selection--visited .selection__item {
+    width: 50%;
+  }
+
+  .selection--grade {
+    order: -1;
+    width: 50%;
+  }
+
+  .selection--grade .form__legend {
+    text-align: left;
+    .padding(0);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection--visited .selection__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .selection--visited .selection__item {
+    width: 25%;
+  }
+}

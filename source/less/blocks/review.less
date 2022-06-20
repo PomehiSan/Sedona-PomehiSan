@@ -5,7 +5,6 @@
 }
 
 .review__headline {
-  padding: 0 20px;
   margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
@@ -15,10 +14,19 @@
   }
 }
 
-.review__review-form {
+.review__form {
   max-width: 375px;
-  padding: 0 20px;
   margin-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 900px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .review__greetings {

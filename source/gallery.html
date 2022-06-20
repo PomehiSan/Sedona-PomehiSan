@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page-body">
-    <header class="page-header wrapper">
+    <header class="page-header">
       <div class="page-header__menu">
         <nav class="main-nav">
           <ul class="main-nav__site-list">
@@ -43,14 +43,14 @@
       </div>
     </header>
 
-    <main class="gallery wrapper">
+    <main class="gallery">
       <h1 class="visually-hidden">Галлерея города Sedona</h1>
 
-      <div class="greetings greetings--secondary-page">
+      <div class="gallery__greetings greetings greetings--secondary-page">
         <img class="greetings__image greetings__image--secondary-page" src="img/sedona.svg" width="229px" height="39px" alt="Sedona">
       </div>
 
-      <section class="gallery__photo photo">
+      <section class="gallery__photo photo container container--photo">
         <h2 class="visually-hidden">Фото местности Sedona</h2>
         <div class="gallery__headline headline">
           <p class="headline__title">Фото и видео</p>
@@ -58,47 +58,55 @@
         </div>
         <ul class="photo__list">
           <li class="photo__item">
-            <h3 class="photo__name">Неродные просторы</h3>
+            <div class="photo__description">
+              <h3 class="photo__name">Неродные просторы</h3>
+              <p class="photo__author">Борис</p>
+              <p class="photo__like-count" aria-labelledby="количество лайков">1350</p>
+            </div>
             <div class="photo__image-box">
               <img class="photo__image" src="img/gallery/photo1.jpg" alt="шоссе" width="280" height="280">
             </div>
-            <p class="photo__author">Борис</p>
-            <p class="photo__like-count" aria-labelledby="количество лайков">1350</p>
           </li>
           <li class="photo__item">
-            <h3 class="photo__name">Местная растительность</h3>
+            <div class="photo__description">
+              <h3 class="photo__name">Местная растительность</h3>
+              <p class="photo__author">Сергей</p>
+              <p class="photo__like-count" aria-labelledby="количество лайков">143</p>
+            </div>
             <div class="photo__image-box">
               <img class="photo__image" src="img/gallery/photo2.jpg" alt="растение" width="280" height="280">
             </div>
-            <p class="photo__author">Сергей</p>
-            <p class="photo__like-count" aria-labelledby="количество лайков">143</p>
           </li>
           <li class="photo__item">
-            <h3 class="photo__name">Дорога на север</h3>
+            <div class="photo__description">
+              <h3 class="photo__name">Дорога на север</h3>
+              <p class="photo__author">Петр</p>
+              <p class="photo__like-count" aria-labelledby="количество лайков">96</p>
+            </div>
             <div class="photo__image-box">
               <img class="photo__image" src="img/gallery/photo3.jpg" alt="горная дорога" width="280" height="280">
             </div>
-            <p class="photo__author">Петр</p>
-            <p class="photo__like-count" aria-labelledby="количество лайков">96</p>
           </li>
           <li class="photo__item">
-            <h3 class="photo__name">Мост дьявола</h3>
+            <div class="photo__description">
+              <h3 class="photo__name">Мост дьявола</h3>
+              <p class="photo__author">Антон</p>
+              <p class="photo__like-count" aria-labelledby="количество лайков">254</p>
+            </div>
             <div class="photo__image-box">
               <img class="photo__image" src="img/gallery/photo4.jpg" alt="каньен" width="280" height="280">
             </div>
-            <p class="photo__author">Антон</p>
-            <p class="photo__like-count" aria-labelledby="количество лайков">254</p>
           </li>
         </ul>
       </section>
 
-      <section class="gallery__video">
+      <section class="gallery__media container container--video">
         <h2 class="visually-hidden">Видео местности Sedona</h2>
         <div class="gallery__headline gallery__headline--video headline">
           <p class="headline__title">Все еще сомневаетесь?</p>
           <p class="headline__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <div class="video__panel">
+        <div class="video">
           <img class="video__background-image" src="img/gallery/video.jpg" width="320" height="201">
           <div class="video__control">
             <input class="video__progress-bar" type="range">
@@ -109,7 +117,7 @@
         </div>
       </section>
 
-      <footer class="page-footer">
+      <footer class="page-footer container">
 
         <p class="page-footer__hashtag hashtag">#VisitSedona</p>
 

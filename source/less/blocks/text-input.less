@@ -1,14 +1,52 @@
-.text-input {
-  &--full-name .text-input__item {
-    display: flex;
+.text-input--full-name {
+  @media (min-width: @tablet-width) {
+    padding-left: 58px;
+    width: 50%;
+  }
+}
 
-    &:not(:last-of-type) {
-      margin-bottom: 20px;
-    }
+.text-input__label {
+  text-transform: uppercase;
+}
+
+.text-input--full-name .text-input__item {
+  display: flex;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.text-input--contact {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 648px;
+    text-align: center;
   }
 
-  &--contact .text-input__item:not(:last-of-type) {
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.text-input--contact .text-input__list {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.text-input--contact .text-input__item {
+  &:not(:last-of-type) {
     margin-bottom: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: 50%;
   }
 }
 
@@ -16,10 +54,22 @@
   display: block;
   margin-bottom: 8px;
   padding-left: 22px;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    width: max-content;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
 }
 
-.text-input__label {
-  text-transform: uppercase;
+.text-input--contact .text-input__input {
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    flex-grow: 1;
+  }
 }
 
 .text-input__list {
@@ -27,6 +77,8 @@
 }
 
 .text-input__input {
+  .padding();
+  box-sizing: border-box;
   font: inherit;
   font-size: 18px;
   line-height: 26px;
@@ -42,5 +94,6 @@
   &--textarea {
     resize: none;
     width: 100%;
+    height: 160px;
   }
 }

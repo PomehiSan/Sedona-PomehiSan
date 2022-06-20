@@ -43,7 +43,7 @@
     </div>
   </header>
 
-  <main class="review wrapper">
+  <main class="review">
     <h1 class="visually-hidden">Оставить отзыв о Sedona</h1>
 
     <div class="greetings review__greetings greetings--secondary-page">
@@ -55,9 +55,9 @@
       <p class="headline__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </div>
 
-    <form class="review__review-form review-form" action="https://echo.htmlacademy.ru">
-      <fieldset class="review-form__item text-input text-input--full-name">
-        <legend class="review-form__legend">Представьтесь:</legend>
+    <form class="review__form form container" action="https://echo.htmlacademy.ru">
+      <fieldset class="form__item text-input text-input--full-name">
+        <legend class="form__legend form__legend--full-name">Представьтесь:</legend>
         <ul class="text-input__list">
           <li class="text-input__item">
             <label class="text-input__label" for="first-name">Имя*:</label>
@@ -73,11 +73,11 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="review-form__item text-input text-input--contact">
-        <legend class="review-form__legend">Контактная информация:</legend>
+      <fieldset class="form__item text-input text-input--contact">
+        <legend class="form__legend">Контактная информация:</legend>
         <ul class="text-input__list">
           <li class="text-input__item">
-            <label class="text-input__label" for="phone">Контактный телефон*:</label>
+            <label class="text-input__label" for="phone"><span class="hide--desktop">Контактный </span>телефон*:</label>
             <input class="text-input__input text-input__input--phone" name="phone" type="phone" placeholder="Введите телефон">
           </li>
           <li class="text-input__item">
@@ -86,8 +86,8 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="review-form__item selection selection--grade">
-        <legend class="review-form__legend">Ваше общее впечатление:</legend>
+      <fieldset class="form__item selection selection--grade">
+        <legend class="form__legend">Ваше общее впечатление:</legend>
         <ul class="selection__list">
           <li class="selection__item">
             <input class="selection-input selection__radio" type="radio" name="grade-radio" id="grade-positively" value="positively" checked>
@@ -103,8 +103,8 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="review-form__item selection selection--visited">
-        <legend class="review-form__legend">Посещенные достопримечательности:</legend>
+      <fieldset class="form__item selection selection--visited">
+        <legend class="form__legend">Посещенные достопримечательности:</legend>
         <ul class="selection__list">
           <li class="selection__item">
             <input class="selection-input selection__checkbox" type="checkbox" name="devil-bridge" checked>
@@ -124,15 +124,16 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="review-form__item review-form__item--textarea text-input">
-        <legend class="review-form__legend">Опишите свои эмоции:</legend>
-        <textarea class="text-input__input text-input__input--textarea" name="impressions" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+      <fieldset class="form__item form__item--textarea text-input">
+        <legend class="form__legend">Опишите свои эмоции:</legend>
+        <textarea class="text-input__input text-input__input--textarea" name="impressions" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
-      <button class="review-form__button button" type="submit">Отправить отзыв</button>
+      <button class="form__button button" type="submit">Отправить отзыв</button>
+      <p class="form__description">* — обязательные поля</p>
     </form>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer container">
 
     <p class="page-footer__hashtag hashtag">#VisitSedona</p>
 
