@@ -1,9 +1,35 @@
 .developer {
+  position: relative;
   text-transform: uppercase;
-  // display: flex;
+  height: 34px;
+  width: max-content;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .developer__text {
-  line-height: 26px;
-  display: inline;
+  color: @basic-black;
+  line-height: 34px;
+  padding-right: 46px;
+  margin: 0;
+}
+
+.developer__logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 34px;
+}
+
+.developer:hover .developer__logo-path,
+.developer:focus .developer__logo-path {
+  fill: @basic-lightblue;
+}
+
+.developer:active .developer__logo-path {
+  fill: rgba(@basic-black, 0.3);
 }

@@ -1,5 +1,7 @@
 @tablet-width: 768px;
 @desktop-width: 1200px;
+@mobile-width-only: 767px;
+@tablet-width-max: 1199px;
 
 .page {
   background-color: @backgroubd-input-gray;
@@ -22,7 +24,6 @@
 
 .link {
   text-decoration: none;
-  color: @basic-white;
 }
 
 .visually-hidden {
@@ -71,5 +72,21 @@
     &--photo {
       .padding();
     }
+  }
+}
+
+.tablet-wrap {
+  display: none;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
+    display: inline;
+  }
+}
+
+.desktop-wrap {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
   }
 }
