@@ -75,17 +75,21 @@
   }
 }
 
-.tablet-wrap {
+.mobile-wrap {
   display: none;
 
+  @media (max-width: @mobile-width-only) {
+    display: inline;
+  }
+}
+
+.tablet-wrap {
   @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
     display: inline;
   }
 }
 
 .desktop-wrap {
-  display: none;
-
   @media (min-width: @desktop-width) {
     display: inline;
   }
