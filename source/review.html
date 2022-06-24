@@ -16,22 +16,22 @@
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__site-list">
         <li class="main-nav__item">
-          <a class="link button main-nav__link" href="index.html">
+          <a class="link main-nav__link" href="index.html">
             Главная
           </a>
         </li>
         <li class="main-nav__item">
-          <a class="link button main-nav__link" href="gallery.html">
+          <a class="link main-nav__link" href="gallery.html">
             Фото и видео
           </a>
         </li>
         <li class="main-nav__item">
-          <a class="link button main-nav__link  main-nav__link--current">
+          <a class="link main-nav__link main-nav__link--current">
             Форма отзыва
           </a>
         </li>
         <li class="main-nav__item">
-          <a class="link button main-nav__link" href="https://htmlacademy.ru/">
+          <a class="link main-nav__link" href="https://htmlacademy.ru/">
             HTML Academy
           </a>
         </li>
@@ -59,15 +59,15 @@
         <ul class="text-input__list">
           <li class="text-input__item">
             <label class="text-input__label" for="first-name">Имя*:</label>
-            <input class="text-input__input text-input__input--full-name" name="first-name" type="text" placeholder="Петр">
+            <input class="text-input__input text-input__input--first-name" name="first-name" type="text" placeholder="Петр">
           </li>
           <li class="text-input__item">
             <label class="text-input__label" for="last-name">Фамилия*:</label>
-            <input class="text-input__input text-input__input--full-name" name="last-name" type="text" placeholder="Иванов">
+            <input class="text-input__input text-input__input--last-name" name="last-name" type="text" placeholder="Иванов">
           </li>
           <li class="text-input__item">
-            <label class="text-input__label" for="second-name">Отчество:</label>
-            <input class="text-input__input text-input__input--full-name" name="second-name" type="text" placeholder="Александрович">
+            <label class="text-input__label text-input__label--second-name" for="second-name">Отчество:</label>
+            <input class="text-input__input text-input__input--second-name" name="second-name" type="text" placeholder="Александрович">
           </li>
         </ul>
       </fieldset>
@@ -76,53 +76,57 @@
         <ul class="text-input__list">
           <li class="text-input__item">
             <label class="text-input__label" for="phone"><span class="hide--desktop">Контактный </span>телефон*:</label>
-            <input class="text-input__input text-input__input--phone" name="phone" type="phone" placeholder="Введите телефон">
+            <div class="text-input__input-box text-input__input-box--phone">
+              <input class="text-input__input text-input__input--phone" name="phone" type="phone" placeholder="Введите телефон">
+            </div>
           </li>
           <li class="text-input__item">
             <label class="text-input__label" for="email">Электронная почта*:</label>
-            <input class="text-input__input text-input__input--email" name="email" type="email" placeholder="Введите e-mail">
+            <div class="text-input__input-box text-input__input-box--email">
+              <input class="text-input__input text-input__input--email" name="email" type="email" placeholder="Введите e-mail">
+            </div>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__item selection selection--grade">
         <legend class="form__legend">Ваше общее впечатление:</legend>
         <ul class="selection__list">
-          <li class="selection__item">
-            <input class="selection-input selection__radio" type="radio" name="grade-radio" id="grade-positively" value="positively" checked>
+          <li class="selection__item selection__item--radio">
+            <input class="selection__input" type="radio" name="grade-radio" id="grade-positively" value="positively" checked>
             <label class="selection__label" for="grade-positively">Скорее положительное</label>
           </li>
-          <li class="selection__item">
-            <input class="selection-input selection__radio" type="radio" name="grade-radio" id="grade-negative" value="negative">
+          <li class="selection__item selection__item--radio">
+            <input class="selection__input" type="radio" name="grade-radio" id="grade-negative" value="negative">
             <label class="selection__label" for="grade-negative">Скорее отрицательное</label>
           </li>
-          <li class="selection__item">
-            <input class="selection-input selection__radio" type="radio" name="grade-radio" id="grade-abstention" value="abstention">
+          <li class="selection__item selection__item--radio">
+            <input class="selection__input" type="radio" name="grade-radio" id="grade-abstention" value="abstention">
             <label class="selection__label" for="grade-abstention">Затрудняюсь ответить</label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__item selection selection--visited">
-        <legend class="form__legend">Посещенные достопримечательности:</legend>
+        <legend class="form__legend">Посещенные<br> достопримечательности:</legend>
         <ul class="selection__list">
-          <li class="selection__item">
-            <input class="selection-input selection__checkbox" type="checkbox" name="devil-bridge" checked>
-            <label class="selection__label" for="devil-bridge">Мост дьявола</label>
+          <li class="selection__item selection__item--checkbox">
+            <input class="selection__input" type="checkbox" name="devil-bridge" id="devil-bridge" checked>
+            <label class="selection__label" for="devil-bridge">Мост Дьявола</label>
           </li>
-          <li class="selection__item">
-            <input class="selection-input selection__checkbox" type="checkbox" name="mountain-bell" checked>
+          <li class="selection__item selection__item--checkbox">
+            <input class="selection__input" type="checkbox" name="mountain-bell" id="mountain-bell" checked>
             <label class="selection__label" for="mountain-bell">Гора-Колокол</label>
           </li>
-          <li class="selection__item">
-            <input class="selection-input selection__checkbox" type="checkbox" name="slide-park" checked>
+          <li class="selection__item selection__item--checkbox">
+            <input class="selection__input" type="checkbox" name="slide-park" id="slide-park" checked>
             <label class="selection__label" for="slide-park">Слайд-парк</label>
           </li>
-          <li class="selection__item">
-            <input class="selection-input selection__checkbox" type="checkbox" name="red-rocks">
+          <li class="selection__item selection__item--checkbox">
+            <input class="selection__input" type="checkbox" name="red-rocks" id="red-rocks">
             <label class="selection__label" for="red-rocks">Красные скалы</label>
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__item form__item--textarea text-input">
+      <fieldset class="form__item text-input text-input--textarea">
         <legend class="form__legend">Опишите свои эмоции:</legend>
         <textarea class="text-input__input text-input__input--textarea" name="impressions" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>

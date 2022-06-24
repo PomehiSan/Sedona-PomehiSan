@@ -32,6 +32,24 @@
   width: 100%;
 }
 
+.form__item.selection--visited {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.form__item.text-input--contact {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.form__item.text-input--full-name {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 53px;
+  }
+}
+
 .form__legend {
   text-align: center;
   font-size: 18px;
@@ -43,6 +61,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
+    margin-bottom: 56px;
   }
 
   &--full-name {
@@ -53,20 +72,16 @@
   }
 }
 
-.form__item--textarea {
-  display: flex;
-}
-
-.form__item--textarea .form__legend {
-  margin-bottom: 15px;
-}
-
 .form__button {
   margin: 0 auto;
+  padding-top: 5px;
+  transform: translateX(-1px);
 
   @media (min-width: @tablet-width) {
     margin: 0;
     min-width: 324px;
+    transform: translateX(0);
+    padding-right: 15px;
   }
 
   @media (min-width: @desktop-width) {

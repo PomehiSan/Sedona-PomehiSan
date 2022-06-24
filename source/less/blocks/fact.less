@@ -10,16 +10,36 @@
 }
 
 .fact__item {
+  position: relative;
   display: flex;
   flex-direction: column;
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 87%;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: @basic-lightgray2;
+  }
+
   @media (min-width: @tablet-width) {
+    &::after {
+      display: none;
+    }
+
     flex-direction: row;
     flex-wrap: wrap;
     width: 33.333%;
   }
 
   &--main-fact {
+    &::after {
+      display: none;
+    }
+
     @media (min-width: @tablet-width) {
       width: 100%;
     }
@@ -48,6 +68,12 @@
       @media (min-width: @tablet-width) {
         display: none;
       }
+    }
+  }
+
+  &:last-of-type {
+    &::after {
+      display: none;
     }
   }
 }
@@ -85,7 +111,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 256px;
-    grid-template-rows: 36.9% auto 1fr;
+    grid-template-rows: 37.3% auto 1fr;
 
     &--main-fact-fisrt {
       grid-template-rows: 36.5% auto 1fr;
@@ -94,6 +120,16 @@
     &--main-fact-second {
       order: 2;
       grid-template-rows: 37% auto 1fr;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--main-fact-fisrt {
+      grid-template-rows: 38.5% auto 1fr;
+    }
+
+    &--main-fact-second {
+      grid-template-rows: 40.4% auto 1fr;
     }
   }
 }
@@ -139,6 +175,10 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px;
   }
 }
 
@@ -186,5 +226,9 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
   }
 }

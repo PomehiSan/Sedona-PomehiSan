@@ -42,7 +42,8 @@
 .button {
   display: flex;
   border: none;
-  color: white;
+  color: @basic-white;
+  font-family: inherit;
   width: 280px;
   min-height: 58px;
   background-color: @basic-lightblue;
@@ -52,6 +53,33 @@
   font-weight: 700;
   justify-content: center;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-blue;
+  }
+
+  &:active {
+    background-color: @basic-darkblue;
+    color: rgba(@basic-white, 0.3);
+  }
+
+  &--disabled {
+    background-color: @basic-lightgray;
+    cursor: default;
+    pointer-events: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @basic-white;
+      background-color: @basic-lightgray;
+    }
+  }
+
+  &:disabled {
+    background-color: @basic-lightgray;
+  }
 }
 
 .container {
@@ -84,21 +112,25 @@
 }
 
 .tablet-wrap {
-  @media (max-width: @mobile-width-only) {
-    display: none;
-  }
+  display: none;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
     display: inline;
   }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
 }
 
 .desktop-wrap {
+  display: none;
+
   @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.tablet-or-desktop-wrap {
+  display: none;
+
+  @media (min-width: @tablet-width) {
     display: inline;
   }
 }
