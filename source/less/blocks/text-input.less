@@ -32,6 +32,17 @@
 
   &--email {
     padding-bottom: 17px;
+
+    @media (min-width: @desktop-width) {
+      padding-left: 24px;
+      padding-top: 17px;
+    }
+  }
+
+  &--phone {
+    @media (min-width: @desktop-width) {
+      padding-bottom: 16px;
+    }
   }
 
   &--textarea {
@@ -47,10 +58,6 @@
   }
 }
 
-.text-input--full-name .text-input__input {
-  flex-grow: 1;
-}
-
 // --full-name
 
 .text-input--full-name {
@@ -58,6 +65,14 @@
     padding-left: 58px;
     width: 50%;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+  }
+}
+
+.text-input--full-name .text-input__input {
+  flex-grow: 1;
 }
 
 .text-input--full-name .form__legend {
@@ -104,6 +119,11 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 19px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 18px;
+    margin-bottom: 72px;
+  }
 }
 
 .text-input--contact .text-input__list {
@@ -126,6 +146,8 @@
   @media (min-width: @desktop-width) {
     display: flex;
     width: 50%;
+    align-items: center;
+    margin-bottom: 25px;
   }
 }
 
@@ -140,6 +162,10 @@
     margin-bottom: 0;
     padding-left: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 16px;
+  }
 }
 
 .text-input--contact .text-input__input-box {
@@ -149,6 +175,11 @@
   box-sizing: border-box;
   padding-right: 58px;
   background-color: @basic-lightgray3;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    flex-grow: 1;
+  }
 
   &::after {
     content: "";
@@ -161,6 +192,10 @@
   }
 
   &--phone {
+    @media (min-width: @desktop-width) {
+      margin-right: 79px;
+    }
+
     &::after {
       width: 18px;
       height: 18px;
@@ -169,6 +204,10 @@
   }
 
   &--email {
+    @media (min-width: @desktop-width) {
+      height: 58px;
+    }
+
     &::after {
       transform: translateY(-60%);
       width: 16px;

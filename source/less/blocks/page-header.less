@@ -9,6 +9,10 @@
   height: 56px;
   z-index: 1;
 
+  @media (max-width: @mobile-width-only) {
+    box-shadow: 0 -3px 6px rgba(@basic-black, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     position: absolute;
     // width: 100%;
