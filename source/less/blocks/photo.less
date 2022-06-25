@@ -11,6 +11,10 @@
     margin: 0 auto;
   }
 
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
+    .container;
+  }
+
   @media (min-width: @desktop-width) {
     max-width: 100%;
   }
@@ -20,6 +24,27 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    .container;
+
+    &:not(:last-of-type) {
+      margin-bottom: 22px;
+    }
+
+    padding-bottom: 17px;
+
+    &::after {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 1px;
+      background-color: @basic-lightgray;
+      bottom: 0;
+      left: 0;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -43,8 +68,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     min-height: 80px;
+    padding: 0 20px;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
     grid-template-columns: 1fr max-content;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
     grid-template-areas:
       "name likes"
       "author likes";
@@ -59,15 +88,34 @@
   }
 }
 
+.photo__item:not(:first-of-type) .photo__description {
+  @media (min-width: @tablet-width) {
+    padding-right: 30px;
+  }
+}
+
+.photo__item:nth-of-type(3) .photo__description {
+  @media (min-width: @tablet-width) {
+    padding-right: 36px;
+  }
+}
+
 .photo__image-box {
   width: 100%;
   height: 280px;
   max-width: 420px;
-  .padding(@top: 22px, @bottom: 11px);
+  .padding(@bottom: 11px);
 
   @media (min-width: @tablet-width) {
     max-width: none;
+    height: 267px;
     .padding();
+  }
+}
+
+.photo__item:first-of-type .photo__image-box {
+  @media (min-width: @tablet-width) {
+    height: 400px;
   }
 }
 
@@ -90,7 +138,7 @@
 }
 
 .photo__author {
-  .margin(@bottom: 13px);
+  .margin(@bottom: 12px);
 
   &::before {
     content: "Автор фото: ";
@@ -104,16 +152,36 @@
   }
 }
 
+.photo__like-box {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    grid-area: likes;
+    align-self: center;
+  }
+}
+
+.photo__like-ico {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.photo__like-ico-path {
+  @media (min-width: @desktop-width) {
+    fill: @basic-white;
+    opacity: 1;
+  }
+}
+
 .photo__like-count {
-  .margin(@bottom: 15px);
+  .margin();
   padding-left: 37px;
   font-weight: 700;
   display: block;
 
   @media (min-width: @tablet-width) {
-    .padding();
     .margin();
-    grid-area: likes;
-    align-self: center;
+    padding-left: 32px;
   }
 }
