@@ -24,3 +24,31 @@
   .padding();
   list-style: none;
 }
+
+.legend-edge-line(@margin-bottom: 0, @margin-edge: 63px) {
+  display: flex;
+  align-items: center;
+
+  &::before,
+  &::after {
+    display: block;
+    box-sizing: border-box;
+    content: "";
+    height: 1px;
+    width: auto;
+    flex-grow: 1;
+    bottom: 50%;
+    background-color: @basic-lightgray4;
+    margin-bottom: @margin-bottom;
+  }
+
+  &::before {
+    margin-right: @margin-edge;
+    left: 0;
+  }
+
+  &::after {
+    margin-left: @margin-edge;
+    right: 0;
+  }
+}
