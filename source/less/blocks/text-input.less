@@ -12,49 +12,73 @@
 }
 
 .text-input__input {
+  @input-pading-left: 19px;
+  @input-pading-top: 18px;
+  @input-pading-bottom: 15px;
+  @input-pading-right: 19px;
+
   .padding();
   box-sizing: border-box;
   font: inherit;
   height: 58px;
-  padding-top: 18px;
-  padding-bottom: 14px;
-  padding-left: 22px;
+  padding-top: @input-pading-top;
+  padding-bottom: @input-pading-bottom;
+  padding-left: @input-pading-left;
+  padding-right: @input-pading-right;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  border: none;
   width: 100%;
+  border: 4px solid @backgroubd-input-gray;
   background-color: @backgroubd-input-gray;
 
   &--last-name {
-    padding-left: 23px;
+    padding-left: @input-pading-left + 1;
   }
 
   &--email {
-    padding-bottom: 17px;
+    padding-bottom: @input-pading-bottom + 4;
 
     @media (min-width: @desktop-width) {
-      padding-left: 24px;
-      padding-top: 17px;
+      padding-left: @input-pading-left;
+      padding-top: @input-pading-top + 1;
     }
   }
 
   &--phone {
+    padding-bottom: @input-pading-bottom - 1;
+
     @media (min-width: @desktop-width) {
-      padding-bottom: 16px;
+      padding-bottom: @input-pading-bottom + 1;
     }
   }
 
   &--textarea {
     resize: none;
     height: 160px;
-    padding-top: 13px;
+    padding-top: @input-pading-top - 9;
     padding-right: 23px;
-    padding-left: 21px;
+    padding-left: @input-pading-left - 3;
 
     @media (min-width: @tablet-width) {
-      padding-top: 18px;
+      padding-top: @input-pading-top - 4;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-left: @input-pading-left - 2;
+    }
+  }
+
+  &:hover {
+    border: 4px solid @basic-lightgray;
+    background-color: @basic-lightgray;
+  }
+
+  &:focus,
+  &:active {
+    background-color: @basic-white;
+    border: 4px solid @basic-lightgray;
+    outline: 0;
   }
 }
 
@@ -101,7 +125,6 @@
   @media (min-width: @tablet-width) {
     margin-left: auto;
     margin-right: auto;
-    width: 648px;
     text-align: center;
   }
 
@@ -140,6 +163,12 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 25px;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -229,7 +258,6 @@
 
 .text-input--textarea {
   display: flex;
-  margin-bottom: 51px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 58px;

@@ -17,20 +17,17 @@
 }
 
 .video__control {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   height: 111px;
   width: 87.5%;
   margin: 0 auto;
   background-color: rgba(@basic-black, 0.6);
+  align-items: center;
+  justify-content: space-between;
 
   transform: translateY(-51px);
-
-  grid-template-columns: auto 1fr 80px 50px;
-  grid-template-rows: 45px 1fr;
-  grid-template-areas:
-    "bar bar bar bar"
-    "reset reset subtitles fullscreen";
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -42,23 +39,36 @@
     right: 0;
 
     transform: translateY(0);
+  }
 
-    grid-template-columns: auto 1fr 37px auto;
-    grid-template-rows: 93px;
-    grid-template-areas: "reset bar subtitles fullscreen";
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 66px;
+    background-color: @backgroubd-input-gray;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
 .video__progress-bar {
-  grid-area: bar;
   height: 3px;
   background-color: transparent;
   appearance: none;
   align-self: center;
   padding: 0 22px;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
-    padding: 0 34px;
+    width: auto;
+    flex-grow: 1;
+    margin: 0 19px;
   }
 
   &:focus {
@@ -87,40 +97,53 @@
 
 .video__control-button {
   border: none;
-  background-color: @backgroubd-input-gray;
-  width: 100%;
-  height: 100%;
+  background-color: transparent;
   cursor: pointer;
+  height: min-content;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
   }
 
   &--reset {
-    grid-area: reset;
-
-    @media (max-width: @mobile-width-only) {
-      text-align: left;
-      padding-left: 25px;
-    }
+    margin-left: 25px;
+    margin-right: 102px;
 
     @media (min-width: @tablet-width) {
-      padding-left: 35px;
+      order: -1;
+      .margin(@left: 35px);
     }
-  }
-
-  &--subtitles {
-    grid-area: subtitles;
   }
 
   &--fullscreen {
-    grid-area: fullscreen;
-    padding-right: 25px;
+    margin-right: 23px;
 
     @media (min-width: @tablet-width) {
-      padding-right: 41px;
-      padding-left: 31px;
+      margin-right: 41px;
+      margin-left: 31px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 43px;
+    }
+  }
+}
+
+.video__control-button:hover .video__control-button-ico,
+.video__control-button:focus .video__control-button-ico {
+  fill: @basic-lightblack;
+
+  @media (min-width: @tablet-width) {
+    fill: rgba(@basic-white, 0.6);
+  }
+}
+
+.video__control-button:active .video__control-button-ico {
+  fill: rgba(@basic-lightblack, 0.3);
+
+  @media (min-width: @tablet-width) {
+    fill: rgba(@basic-white, 0.3);
   }
 }
 

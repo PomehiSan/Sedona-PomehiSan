@@ -5,6 +5,11 @@
   <title>Оставить отзыв</title>
   <link href="css/style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="img/favicons/apple.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
 </head>
 <body class="page-body">
   <header class="page-header">
@@ -53,8 +58,8 @@
       <p class="headline__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </div>
 
-    <form class="review__form form container" action="https://echo.htmlacademy.ru">
-      <fieldset class="form__item text-input text-input--full-name">
+    <form class="review__form form" action="https://echo.htmlacademy.ru">
+      <fieldset class="form__item form__item--separator text-input text-input--full-name">
         <legend class="form__legend form__legend--full-name">Представьтесь:</legend>
         <ul class="text-input__list">
           <li class="text-input__item">
@@ -130,8 +135,10 @@
         <legend class="form__legend form__legend--textarea">Опишите свои эмоции:</legend>
         <textarea class="text-input__input text-input__input--textarea" name="impressions" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
-      <button class="form__button button" type="submit">Отправить отзыв</button>
-      <p class="form__description">* — обязательные поля</p>
+      <div class="form__item form__item--footer">
+        <button class="form__button button" type="submit">Отправить отзыв</button>
+        <p class="form__description">* — обязательные поля</p>
+      </div>
     </form>
   </main>
 
