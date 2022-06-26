@@ -1261,11 +1261,6 @@
     left: 0;
   }
 }
-@media (min-width: 768px) {
-  .form__item--separator .form__legend {
-    float: left;
-  }
-}
 .form__item.selection--visited {
   padding-top: 17px;
 }
@@ -1331,6 +1326,7 @@
   margin-bottom: 19px;
   padding: 0 10px;
   width: 100%;
+  float: left;
 }
 @media (min-width: 768px) {
   .form__legend {
