@@ -220,13 +220,6 @@
     margin: 0 auto;
   }
 }
-@media (min-width: 1200px) {
-  .page-header__logo-image {
-    width: 187px;
-    height: 96px;
-    content: url("../img/logotype-desktop.svg");
-  }
-}
 .main-nav {
   position: relative;
 }
@@ -430,7 +423,7 @@
   width: 100%;
   min-height: 389px;
   background-color: #294346;
-  background-image: url("../img/background-main.jpg");
+  background-image: url("../img/greetings/back-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -448,9 +441,20 @@
     padding-right: 120px;
   }
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .greetings {
+    background-image: url("../img/greetings/back-mobile@2x.jpg");
+  }
+}
 @media (min-width: 768px) {
   .greetings {
     min-height: 518px;
+    background-image: url("../img/greetings/back-desktop.jpg");
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .greetings {
+    background-image: url("../img/greetings/back-desktop@2x.jpg");
   }
 }
 .greetings::after {
@@ -465,16 +469,27 @@
   left: 0;
 }
 .greetings--secondary-page {
-  background-image: url("../img/background-secondary-mobile.jpg");
+  background-image: url("../img/greetings/back-mobile.jpg");
   min-height: 158px;
-  background-size: auto;
-  background-position: 50% -56px;
+  background-size: auto 389px;
+  background-position: 50% 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .greetings--secondary-page {
+    background-image: url("../img/greetings/back-mobile@2x.jpg");
+  }
 }
 @media (min-width: 768px) {
   .greetings--secondary-page {
-    background-image: url("../img/background-secondary.jpg");
+    background-image: url("../img/greetings/back-desktop.jpg");
     min-height: 290px;
     background-position: 50% 100%;
+    background-size: auto 518px;
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .greetings--secondary-page {
+    background-image: url("../img/greetings/back-desktop@2x.jpg");
   }
 }
 @media (min-width: 1200px) {
@@ -512,7 +527,6 @@
     margin-top: 101px;
     min-height: 80px;
     padding-right: 4px;
-    content: url("../img/sedona-desktop.svg");
   }
 }
 .headline {
@@ -842,6 +856,15 @@
 @media (max-width: 767px) {
   .fact__image {
     height: 260px;
+    max-width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 512px) and (max-width: 767px) {
+  .fact__image {
+    z-index: 2;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
   }
 }
 @media (min-width: 768px) {
@@ -849,13 +872,30 @@
     width: 66.666%;
   }
 }
-@media (min-width: 1200px) {
-  .fact__image-1 {
-    content: url("../img/facts/true-city.jpg");
+.fact__image-picture {
+  height: 256px;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .fact__image-picture {
+    height: 260px;
+    max-width: 512px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .fact__image-2 {
-    content: url("../img/facts/diablo-bridge.jpg");
+}
+@media (min-width: 512px) and (max-width: 767px) {
+  .fact__image-picture {
+    z-index: 2;
   }
+}
+@media (min-width: 768px) {
+  .fact__image-picture {
+    width: 66.666%;
+  }
+}
+.fact__image-picture > .fact__image {
+  width: 100%;
 }
 .fact__additionally {
   padding-top: 35px;
@@ -2066,7 +2106,7 @@
   margin-bottom: 16px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 420px;
+  max-width: 580px;
 }
 @media (min-width: 768px) {
   .gallery__media {
@@ -2091,13 +2131,19 @@
   padding-left: 0;
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .photo__list {
+    padding: 0 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 768px) {
   .photo__list {
-    flex-direction: row;
-    flex-wrap: wrap;
     max-width: 840px;
     margin: 0 auto;
   }
@@ -2135,10 +2181,9 @@
 }
 @media (max-width: 767px) {
   .photo__item {
-    padding-left: 20px;
-    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 10px;
     padding-bottom: 17px;
   }
   .photo__item:not(:last-of-type) {
@@ -2154,16 +2199,9 @@
     left: 0;
   }
 }
-@media (max-width: 767px) and (min-width: 768px) {
+@media (min-width: 620px) and (max-width: 767px) {
   .photo__item {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-}
-@media (max-width: 767px) and (min-width: 1200px) {
-  .photo__item {
-    padding-left: 120px;
-    padding-right: 120px;
+    margin-bottom: 22px;
   }
 }
 @media (min-width: 768px) {
@@ -2222,9 +2260,8 @@
   }
 }
 .photo__image-box {
-  width: 100%;
   height: 280px;
-  max-width: 420px;
+  width: 280px;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 11px;
@@ -2232,6 +2269,7 @@
 }
 @media (min-width: 768px) {
   .photo__image-box {
+    width: 100%;
     max-width: none;
     height: 267px;
     padding-top: 0;
@@ -2334,12 +2372,36 @@
     padding-left: 32px;
   }
 }
+.video::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 301px;
+  background-image: url("../img/gallery/video-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .video::before {
+    background-image: url("../img/gallery/video-mobile@2x.jpg");
+  }
+}
 @media (min-width: 768px) {
   .video {
     margin: 0 auto;
     position: relative;
     max-width: 800px;
     height: 500px;
+  }
+  .video::before {
+    height: 100%;
+    background-image: url("../img/gallery/video-tablet.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
+  .video::before {
+    background-image: url("../img/gallery/video-tablet@2x.jpg");
   }
 }
 .video__background-image {

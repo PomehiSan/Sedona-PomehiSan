@@ -202,6 +202,14 @@
 
   @media (max-width: @mobile-width-only) {
     height: 260px;
+    max-width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 512px) and (max-width: @mobile-width-only) {
+    z-index: 2;
+    box-shadow: 4px 4px 4px rgba(@basic-black, 0.6);
   }
 
   @media (min-width: @tablet-width) {
@@ -209,14 +217,28 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .fact__image-1 {
-    content: url("../img/facts/true-city.jpg");
+.fact__image-picture {
+  height: 256px;
+  width: 100%;
+
+  @media (max-width: @mobile-width-only) {
+    height: 260px;
+    max-width: 512px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .fact__image-2 {
-    content: url("../img/facts/diablo-bridge.jpg");
+  @media (min-width: 512px) and (max-width: @mobile-width-only) {
+    z-index: 2;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 66.666%;
+  }
+}
+
+.fact__image-picture > .fact__image {
+  width: 100%;
 }
 
 .fact__additionally {

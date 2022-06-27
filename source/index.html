@@ -15,7 +15,10 @@
     <header class="page-header">
       <div class="page-header__logo">
         <a>
-          <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg" width="187" height="97">
+            <img class="page-header__logo-image" src="img/logo/logotype-mobile.svg" width="102" height="84" alt="Sedona">
+          </picture>
         </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -50,7 +53,7 @@
       <h1 class="visually-hidden">Город Sedona - Сайт для туристов</h1>
 
       <div class="greetings main__greetings">
-        <img class="greetings__image" src="img/welcome-sedona.svg" alt="Welcome to the gargeous Sedona">
+        <img class="greetings__image" src="img/greetings/main-page-sedona.svg" width="282" min-height="214" alt="Welcome to the gargeous Sedona">
       </div>
 
       <section class="intro">
@@ -69,7 +72,10 @@
                 <p class="fact__number">№1</p>
                 <p class="fact__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
-              <img class="fact__image fact__image-1" src="img/facts/true-city-mobile.jpg" alt="фото города" width="100%" min-height="260px">
+              <picture class="fact__image-picture">
+                <source media="(min-width: 1200px)" srcset="img/facts/photo-city-desktop.jpg, img/facts/photo-city-desktop@2x.jpg 2x">
+                <img class="fact__image fact__image-1" src="img/facts/photo-city-mobile.jpg" alt="фото города" width="100%" min-height="256px" srcset="img/facts/photo-city-mobile@2x.jpg 2x">
+              </picture>
               <div class="fact__additionally additionally">
                 <ul class="additionally__list">
                   <li class="additionally__item additionally__item--housing">
@@ -95,7 +101,10 @@
                 <p class="fact__number">№2</p>
                 <p class="fact__description">Да, по нему можно пройти!<br class="desktop-wrap"> Если вы осмелитесь, конечно</p>
               </div>
-              <img class="fact__image fact__image-2" src="img/facts/diablo-bridge-mobile.jpg" alt="горы рядом с городом" width="100%" min-height="260px">
+              <picture class="fact__image-picture">
+                <source media="(min-width: 1200px)" srcset="img/facts/photo-bridge-desktop.jpg, img/facts/photo-bridge-desktop@2x.jpg 2x">
+                <img class="fact__image fact__image-2" src="img/facts/photo-bridge-mobile.jpg" alt="горы рядом с городом" width="100%" min-height="256px" srcset="img/facts/photo-bridge-mobile@2x.jpg 2x">
+              </picture>
             </li>
             <li class="fact__item">
               <div class="fact__header">
@@ -139,7 +148,10 @@
 
       <section class="main__map map">
         <h2 class="visually-hidden">Город на карте</h2>
-        <img class="map__static" src="img/map.png" width="320" height="350" alt="местонахождение города">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/map/map-desktop.png, img/map/map-desktop@2x.png 2x">
+          <img class="map__static" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" width="320" height="350" alt="местонахождение города">
+        </picture>
       </section>
     </main>
 

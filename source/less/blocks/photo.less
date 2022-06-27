@@ -1,12 +1,17 @@
 .photo__list {
   .list-clear();
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 
+  @media (max-width: @mobile-width-only) {
+    padding: 0 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
     max-width: 840px;
     margin: 0 auto;
   }
@@ -27,12 +32,13 @@
   position: relative;
 
   @media (max-width: @mobile-width-only) {
-    .container;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
 
     &:not(:last-of-type) {
       margin-bottom: 22px;
     }
-
     padding-bottom: 17px;
 
     &::after {
@@ -44,6 +50,10 @@
       bottom: 0;
       left: 0;
     }
+  }
+
+  @media (min-width: 620px) and (max-width: @mobile-width-only) {
+    margin-bottom: 22px;
   }
 
   @media (min-width: @tablet-width) {
@@ -101,12 +111,12 @@
 }
 
 .photo__image-box {
-  width: 100%;
   height: 280px;
-  max-width: 420px;
+  width: 280px;
   .padding(@bottom: 11px);
 
   @media (min-width: @tablet-width) {
+    width: 100%;
     max-width: none;
     height: 267px;
     .padding();

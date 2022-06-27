@@ -15,7 +15,10 @@
     <header class="page-header">
       <div class="page-header__logo">
         <a href="index.html">
-          <img class="page-header__logo-image" src="img/logotype-mobile.png" width="102" height="84" alt="Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg" width="187" height="97">
+            <img class="page-header__logo-image" src="img/logo/logotype-mobile.svg" width="102" height="84" alt="Sedona">
+          </picture>
         </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -50,7 +53,10 @@
       <h1 class="visually-hidden">Галлерея города Sedona</h1>
 
       <div class="gallery__greetings greetings greetings--secondary-page">
-        <img class="greetings__image greetings__image--secondary-page" src="img/sedona.svg" width="229px" height="39px" alt="Sedona">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/greetings/secondary-page-sedona-desktop.svg">
+          <img class="greetings__image greetings__image--secondary-page" src="img/greetings/secondary-page-sedona-mobile.svg" width="229px" height="39px" alt="Sedona">
+        </picture>
       </div>
 
       <section class="gallery__photo photo">
@@ -72,7 +78,10 @@
               </div>
             </div>
             <div class="photo__image-box">
-              <img class="photo__image" src="img/gallery/photo1.jpg" alt="шоссе" width="280" height="280">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/gallery/photo-1-mobile.jpg 1x, img/gallery/photo-1-mobile@2x.jpg 2x">
+                <img class="photo__image" src="img/gallery/photo-1-tablet.jpg" srcset="img/gallery/photo-1-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
+              </picture>
             </div>
           </li>
           <li class="photo__item">
@@ -87,7 +96,10 @@
               </div>
             </div>
             <div class="photo__image-box">
-              <img class="photo__image" src="img/gallery/photo2.jpg" alt="растение" width="280" height="280">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/gallery/photo-2-mobile.jpg 1x, img/gallery/photo-2-mobile@2x.jpg 2x">
+                <img class="photo__image" src="img/gallery/photo-2-tablet.jpg" srcset="img/gallery/photo-2-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
+              </picture>
             </div>
           </li>
           <li class="photo__item">
@@ -102,7 +114,10 @@
               </div>
             </div>
             <div class="photo__image-box">
-              <img class="photo__image" src="img/gallery/photo3.jpg" alt="горная дорога" width="280" height="280">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/gallery/photo-3-mobile.jpg 1x, img/gallery/photo-3-mobile@2x.jpg 2x">
+                <img class="photo__image" src="img/gallery/photo-3-tablet.jpg" srcset="img/gallery/photo-3-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
+              </picture>
             </div>
           </li>
           <li class="photo__item">
@@ -117,7 +132,10 @@
               </div>
             </div>
             <div class="photo__image-box">
-              <img class="photo__image" src="img/gallery/photo4.jpg" alt="каньен" width="280" height="280">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/gallery/photo-4-mobile.jpg 1x, img/gallery/photo-4-mobile@2x.jpg 2x">
+                <img class="photo__image" src="img/gallery/photo-4-tablet.jpg" srcset="img/gallery/photo-4-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
+              </picture>
             </div>
           </li>
         </ul>
@@ -131,7 +149,6 @@
         </div>
         <div class="gallery__video-container">
           <div class="video">
-            <img class="video__background-image" src="img/gallery/video.jpg" width="320" height="201">
             <div class="video__control-wrapper">
               <div class="video__control">
                 <input class="video__progress-bar" type="range" min="0" max="100" step="0.5" value="15.5">

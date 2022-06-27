@@ -6,14 +6,23 @@
   width: 100%;
   min-height: 389px;
   background-color: @background-dark-blue;
-  background-image: url("../img/background-main.jpg");
+  background-image: url("../img/greetings/back-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/greetings/back-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 518px;
+    background-image: url("../img/greetings/back-desktop.jpg");
+  }
+
+  @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/greetings/back-desktop@2x.jpg");
   }
 
   &::after {
@@ -29,15 +38,24 @@
   }
 
   &--secondary-page {
-    background-image: url("../img/background-secondary-mobile.jpg");
+    background-image: url("../img/greetings/back-mobile.jpg");
     min-height: 158px;
-    background-size: auto;
-    background-position: 50% -56px;
+    background-size: auto 389px;
+    background-position: 50% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/greetings/back-mobile@2x.jpg");
+    }
 
     @media (min-width: @tablet-width) {
-      background-image: url("../img/background-secondary.jpg");
+      background-image: url("../img/greetings/back-desktop.jpg");
       min-height: 290px;
       background-position: 50% 100%;
+      background-size: auto 518px;
+    }
+
+    @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+      background-image: url("../img/greetings/back-desktop@2x.jpg");
     }
 
     @media (min-width: @desktop-width) {
@@ -73,7 +91,6 @@
       margin-top: 101px;
       min-height: 80px;
       padding-right: 4px;
-      content: url("../img/sedona-desktop.svg");
     }
   }
 }
