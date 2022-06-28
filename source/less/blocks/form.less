@@ -3,6 +3,7 @@
   flex-direction: column;
   text-align: left;
   position: relative;
+  word-wrap: break-word;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -113,17 +114,19 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 19px;
-  padding: 0 10px;
-  width: 100%;
+  width: 280px;
   float: left;
 
   @media (min-width: @tablet-width) {
+    width: 100%;
+    max-width: 648px;
     font-size: 21px;
     margin-bottom: 56px;
   }
 
   &--full-name {
     @media (min-width: @tablet-width) {
+      max-width: 332px;
       align-self: flex-start;
       text-align: left;
       .padding();
@@ -132,6 +135,7 @@
 
   &--grade {
     @media (min-width: @tablet-width) {
+      max-width: 370px;
       align-self: flex-start;
     }
   }
@@ -158,6 +162,7 @@
 .form__item--footer {
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &::before {
     display: none;
@@ -168,9 +173,16 @@
   margin: 0 auto;
   padding-top: 5px;
   transform: translateX(-1px);
+  margin-right: 20px;
+  margin-bottom: 10px;
+  order: -2;
+  // Order -2 на кнопке и order -1 на "обязательные поля", для того,
+  // чтобы если будут доп кнопки, они шли после этих блоков
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
     min-width: 324px;
     transform: translateX(0);
     padding-right: 15px;
@@ -189,7 +201,8 @@
   text-align: right;
   line-height: 26px;
   width: max-content;
-  .margin(@top: auto, @bottom: 12px);
+  .margin(@top: 19px, @bottom: auto);
+  order: -1;
 
   @media (min-width: @tablet-width) {
     display: block;

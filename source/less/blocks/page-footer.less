@@ -8,11 +8,13 @@
 }
 
 .page-footer__hashtag {
-  .margin();
+  .margin(@left: auto, @right: auto);
   .padding(@bottom: 34px, @top: 10px);
+  max-width: 200px;
 
   @media (min-width: @tablet-width) {
     .padding(@bottom: 2px);
+    .margin();
   }
 }
 

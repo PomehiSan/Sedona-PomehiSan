@@ -26,8 +26,7 @@
   display: flex;
   position: relative;
   min-height: 56px;
-  padding-left: 78px;
-  align-items: center;
+  padding-left: 80px;
   box-sizing: border-box;
 
   &:last-of-type {
@@ -68,6 +67,8 @@
 .selection__label {
   font-size: 18px;
   font-weight: 700;
+  max-width: 200px;
+  padding-top: 16px;
 
   &::before {
     content: "";
@@ -96,14 +97,18 @@
     content: "";
     position: absolute;
     display: none;
-    left: 17px;
+    left: 19px;
     top: 17px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      left: 18px;
+    }
   }
 }
 
 .selection__item--radio .selection__label {
-  padding-top: 2px;
-
   &::before {
     border-radius: 50%;
   }
@@ -111,14 +116,13 @@
   &::after {
     width: 21px;
     height: 21px;
-    left: 17px;
     background-color: @basic-lightblack;
     border-radius: 50%;
   }
 }
 
 .selection__item--checkbox .selection__label {
-  padding-top: 2px;
+  max-width: 164px;
 
   &::before {
     border-radius: 4px;
@@ -127,6 +131,8 @@
   &::after {
     width: 23px;
     height: 16px;
+    top: 20px;
+    left: 18px;
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
   }
@@ -178,9 +184,5 @@
 
   .selection--visited .selection__item {
     width: auto;
-
-    // &:last-of-type {
-    //   padding-right: 2px;
-    // }
   }
 }
