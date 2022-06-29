@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 .vscode
+pixel-perfect/
 *.ai
 *.log
 *.pdf
@@ -9,4 +10,3 @@
 node_modules/
 npm-debug.*
 Thumbs.db
-sedona-Mobile.png
