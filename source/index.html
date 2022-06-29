@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Город Sedona</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="favicon.ico" />
@@ -15,7 +15,11 @@
     <header class="page-header">
       <div class="page-header__logo">
         <a>
-          <img class="page-header__logo-image" src="img/logo-adaptive.svg" width="102" height="84">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg" width="187" height="97">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg" width="102" height="84">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84">
+          </picture>
         </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -146,9 +150,9 @@
       <section class="main__map map">
         <h2 class="visually-hidden">Город на карте</h2>
         <picture>
-          <source media="(min-width: 768px)" type="image/webp" srcset="img/map/webp/map-desktop.webp 1x, img/map/webp/map-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
           <source media="(min-width: 768px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x">
-          <source type="image/webp" srcset="img/map/webp/map-mobile.webp 1x, img/map/webp/map-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
           <img class="map__static" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" width="320" height="350" alt="местонахождение города">
         </picture>
       </section>
@@ -163,21 +167,21 @@
           <li class="social__item social__item--twitter">
             <a class="social__link social__link--twitter" href="#" aria-label="Twitter">
               <svg class="social__ico" width="18" height="15">
-                <use href="img/sprite.svg#ico-twitter"></use>
+                <use href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social__item--facebook">
             <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
               <svg class="social__ico" width="9" height="19">
-                <use href="img/sprite.svg#ico-facebook"></use>
+                <use href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social__item--youtube">
             <a class="social__link social__link--youtube" href="#" aria-label="Youtube">
               <svg class="social__ico" width="20" height="14">
-                <use href="img/sprite.svg#ico-youtube"></use>
+                <use href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -189,7 +193,7 @@
           <p class="developer__text">Разработано</p>
           <div class="developer__logo">
             <svg class="developer__logo-ico" width="27" height="34">
-              <use href="img/sprite.svg#ico-htmlacademy"></use>
+              <use href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </div>
         </a>
