@@ -10,3 +10,4 @@ pixel-perfect/
 node_modules/
 npm-debug.*
 Thumbs.db
+build
