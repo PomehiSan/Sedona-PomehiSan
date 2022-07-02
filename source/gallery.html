@@ -80,8 +80,11 @@
             </div>
             <div class="photo__image-box">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/gallery/photo-1-mobile.jpg 1x, img/gallery/photo-1-mobile@2x.jpg 2x">
-                <img class="photo__image" src="img/gallery/photo-1-tablet.jpg" srcset="img/gallery/photo-1-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet.webp 1x, img/gallery/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery/photo-1-mobile.webp 1x, img/gallery/photo-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet.jpg 1x, img/gallery/photo-1-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/gallery/photo-1-mobile.jpg" srcset="img/gallery/photo-1-mobile@2x.jpg 2x" alt="шоссе" width="280" height="280">
               </picture>
             </div>
           </li>
@@ -98,6 +101,9 @@
             </div>
             <div class="photo__image-box">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet.webp 1x, img/gallery/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery/photo-2-mobile.webp 1x, img/gallery/photo-2-mobile@2x.webp 2x">
+
                 <source media="(max-width: 767px)" srcset="img/gallery/photo-2-mobile.jpg 1x, img/gallery/photo-2-mobile@2x.jpg 2x">
                 <img class="photo__image" src="img/gallery/photo-2-tablet.jpg" srcset="img/gallery/photo-2-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
               </picture>
@@ -116,6 +122,9 @@
             </div>
             <div class="photo__image-box">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet.webp 1x, img/gallery/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery/photo-3-mobile.webp 1x, img/gallery/photo-3-mobile@2x.webp 2x">
+
                 <source media="(max-width: 767px)" srcset="img/gallery/photo-3-mobile.jpg 1x, img/gallery/photo-3-mobile@2x.jpg 2x">
                 <img class="photo__image" src="img/gallery/photo-3-tablet.jpg" srcset="img/gallery/photo-3-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
               </picture>
@@ -134,6 +143,9 @@
             </div>
             <div class="photo__image-box">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet.webp 1x, img/gallery/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery/photo-4-mobile.webp 1x, img/gallery/photo-4-mobile@2x.webp 2x">
+
                 <source media="(max-width: 767px)" srcset="img/gallery/photo-4-mobile.jpg 1x, img/gallery/photo-4-mobile@2x.jpg 2x">
                 <img class="photo__image" src="img/gallery/photo-4-tablet.jpg" srcset="img/gallery/photo-4-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
               </picture>
@@ -216,6 +228,6 @@
       </div>
 
     </footer>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.min.js"></script>
   </body>
 </html>

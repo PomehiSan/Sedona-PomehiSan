@@ -74,6 +74,9 @@
                 <p class="fact__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
               <picture class="fact__image-picture">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/facts/photo-city-desktop.webp, img/facts/photo-city-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/facts/photo-city-mobile.webp, img/facts/photo-city-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/facts/photo-city-desktop.jpg, img/facts/photo-city-desktop@2x.jpg 2x">
                 <img class="fact__image fact__image-1" src="img/facts/photo-city-mobile.jpg" alt="фото города" width="100%" min-height="256px" srcset="img/facts/photo-city-mobile@2x.jpg 2x">
               </picture>
@@ -103,6 +106,9 @@
                 <p class="fact__description">Да, по нему можно пройти!<br class="desktop-wrap"> Если вы осмелитесь, конечно</p>
               </div>
               <picture class="fact__image-picture">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/facts/photo-bridge-desktop.webp, img/facts/photo-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/facts/photo-bridge-mobile.webp, img/facts/photo-bridge-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/facts/photo-bridge-desktop.jpg, img/facts/photo-bridge-desktop@2x.jpg 2x">
                 <img class="fact__image fact__image-2" src="img/facts/photo-bridge-mobile.jpg" alt="горы рядом с городом" width="100%" min-height="256px" srcset="img/facts/photo-bridge-mobile@2x.jpg 2x">
               </picture>
@@ -150,9 +156,10 @@
       <section class="main__map map">
         <h2 class="visually-hidden">Город на карте</h2>
         <picture>
-          <source media="(min-width: 768px)" type="image" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
           <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 768px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x">
           <img class="map__static" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" width="320" height="350" alt="местонахождение города">
         </picture>
       </section>
@@ -200,6 +207,6 @@
       </div>
 
     </footer>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.min.js"></script>
   </body>
 </html>
