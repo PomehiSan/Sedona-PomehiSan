@@ -10,6 +10,8 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -18,7 +20,7 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg" width="187" height="97">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg" width="102" height="84">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип">
           </picture>
         </a>
       </div>
@@ -160,7 +162,7 @@
           <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
 
           <source media="(min-width: 768px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x">
-          <img class="map__static" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" width="320" height="350" alt="местонахождение города">
+          <img class="map__static" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" width="320" height="350" loading="lazy" alt="местонахождение города">
         </picture>
       </section>
     </main>
