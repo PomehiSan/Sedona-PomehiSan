@@ -162,10 +162,17 @@ const build = gulp.series(
 
 exports.build = build;
 
+const runServer = gulp.series(
+  server
+);
+
+exports.runServer = runServer;
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/js/*.js", gulp.series("js"))
   gulp.watch(["source/img/**/*.*", "!source/img/ico/*.*"], gulp.series("imgCopy"));
   gulp.watch("source/img/ico/*.*", gulp.series("sprite"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
