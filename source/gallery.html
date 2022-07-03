@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Галлерея Sedona</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="favicon.ico" />
@@ -15,7 +15,11 @@
     <header class="page-header">
       <div class="page-header__logo">
         <a href="index.html">
-          <img class="page-header__logo-image" src="img/logo-adaptive.svg" width="102" height="84">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg" width="187" height="97">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg" width="102" height="84">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84">
+          </picture>
         </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -69,15 +73,18 @@
               <p class="photo__author">Борис</p>
               <div class="photo__like-box">
                 <svg class="photo__like-ico" width="23" height="21" fill="black">
-                  <use href="img/sprite.svg#ico-like"></use>
+                  <use href="img/sprite.svg#icon-like"></use>
                 </svg>
                 <p class="photo__like-count" aria-labelledby="количество лайков">1350</p>
               </div>
             </div>
             <div class="photo__image-box">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/gallery/photo-1-mobile.jpg 1x, img/gallery/photo-1-mobile@2x.jpg 2x">
-                <img class="photo__image" src="img/gallery/photo-1-tablet.jpg" srcset="img/gallery/photo-1-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet.webp 1x, img/gallery/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery/photo-1-mobile.webp 1x, img/gallery/photo-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet.jpg 1x, img/gallery/photo-1-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/gallery/photo-1-mobile.jpg" srcset="img/gallery/photo-1-mobile@2x.jpg 2x" alt="шоссе" width="280" height="280">
               </picture>
             </div>
           </li>
@@ -87,13 +94,16 @@
               <p class="photo__author">Сергей</p>
               <div class="photo__like-box">
                 <svg class="photo__like-ico" width="23" height="21" fill="black">
-                  <use href="img/sprite.svg#ico-like"></use>
+                  <use href="img/sprite.svg#icon-like"></use>
                 </svg>
                 <p class="photo__like-count" aria-labelledby="количество лайков">143</p>
               </div>
             </div>
             <div class="photo__image-box">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet.webp 1x, img/gallery/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery/photo-2-mobile.webp 1x, img/gallery/photo-2-mobile@2x.webp 2x">
+
                 <source media="(max-width: 767px)" srcset="img/gallery/photo-2-mobile.jpg 1x, img/gallery/photo-2-mobile@2x.jpg 2x">
                 <img class="photo__image" src="img/gallery/photo-2-tablet.jpg" srcset="img/gallery/photo-2-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
               </picture>
@@ -105,13 +115,16 @@
               <p class="photo__author">Петр</p>
               <div class="photo__like-box">
                 <svg class="photo__like-ico" width="23" height="21" fill="black">
-                  <use href="img/sprite.svg#ico-like"></use>
+                  <use href="img/sprite.svg#icon-like"></use>
                 </svg>
                 <p class="photo__like-count" aria-labelledby="количество лайков">96</p>
               </div>
             </div>
             <div class="photo__image-box">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet.webp 1x, img/gallery/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery/photo-3-mobile.webp 1x, img/gallery/photo-3-mobile@2x.webp 2x">
+
                 <source media="(max-width: 767px)" srcset="img/gallery/photo-3-mobile.jpg 1x, img/gallery/photo-3-mobile@2x.jpg 2x">
                 <img class="photo__image" src="img/gallery/photo-3-tablet.jpg" srcset="img/gallery/photo-3-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
               </picture>
@@ -123,13 +136,16 @@
               <p class="photo__author">Антон</p>
               <div class="photo__like-box">
                 <svg class="photo__like-ico" width="23" height="21" fill="black">
-                  <use href="img/sprite.svg#ico-like"></use>
+                  <use href="img/sprite.svg#icon-like"></use>
                 </svg>
                 <p class="photo__like-count" aria-labelledby="количество лайков">254</p>
               </div>
             </div>
             <div class="photo__image-box">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet.webp 1x, img/gallery/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery/photo-4-mobile.webp 1x, img/gallery/photo-4-mobile@2x.webp 2x">
+
                 <source media="(max-width: 767px)" srcset="img/gallery/photo-4-mobile.jpg 1x, img/gallery/photo-4-mobile@2x.jpg 2x">
                 <img class="photo__image" src="img/gallery/photo-4-tablet.jpg" srcset="img/gallery/photo-4-tablet@2x.jpg 2x" alt="шоссе" width="280" height="280">
               </picture>
@@ -151,17 +167,17 @@
                 <input class="video__progress-bar" type="range" min="0" max="100" step="0.5" value="15.5">
                 <button class="video__control-button video__control-button--reset" type="button" aria-label="начать заново">
                   <svg class="video__control-button-ico-svg" width="16" height="20" fill="#5C6870">
-                    <use href="img/sprite.svg#ico-reset-video"></use>
+                    <use href="img/sprite.svg#icon-replay"></use>
                   </svg>
                 </button>
                 <button class="video__control-button video__control-button--sub" type="button" aria-label="Включить субтитры">
                   <svg class="video__control-button-ico-svg" width="32" height="20" fill="#5C6870">
-                    <use href="img/sprite.svg#ico-subtitles-video"></use>
+                    <use href="img/sprite.svg#icon-subtitles"></use>
                   </svg>
                 </button>
                 <button class="video__control-button video__control-button--fullscreen" type="button" aria-label="На весь экран">
                   <svg class="video__control-button-ico-svg" width="20" height="20" fill="#5C6870">
-                    <use href="img/sprite.svg#ico-fullscreen-video"></use>
+                    <use href="img/sprite.svg#icon-fullscreen"></use>
                   </svg>
                 </button>
               </div>
@@ -179,21 +195,21 @@
           <li class="social__item social__item--twitter">
             <a class="social__link social__link--twitter" href="#" aria-label="Twitter">
               <svg class="social__ico" width="18" height="15">
-                <use href="img/sprite.svg#ico-twitter"></use>
+                <use href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social__item--facebook">
             <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
               <svg class="social__ico" width="9" height="19">
-                <use href="img/sprite.svg#ico-facebook"></use>
+                <use href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social__item--youtube">
             <a class="social__link social__link--youtube" href="#" aria-label="Youtube">
               <svg class="social__ico" width="20" height="14">
-                <use href="img/sprite.svg#ico-youtube"></use>
+                <use href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -205,13 +221,13 @@
           <p class="developer__text">Разработано</p>
           <div class="developer__logo">
             <svg class="developer__logo-ico" width="27" height="34">
-              <use href="img/sprite.svg#ico-htmlacademy"></use>
+              <use href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </div>
         </a>
       </div>
 
     </footer>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.min.js"></script>
   </body>
 </html>
